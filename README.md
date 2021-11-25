@@ -5,3 +5,6 @@ Alerts are scheduled to be displayed for a certain time.
 
 # drush command
 a drush command to sanitize passwords on database.
+
+# url redirect
+Contribute a source/destination urls and expose these urls as an api.
