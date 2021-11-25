@@ -1,0 +1,6 @@
+alert.block:
+  version: 1.x
+  js:
+    js/alert.block.js: {}
+  dependencies:
+    - core/jquery

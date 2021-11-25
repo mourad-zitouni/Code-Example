@@ -1,0 +1,31 @@
+alert.add_page:
+  path: '/alert/add'
+  defaults:
+    _controller: '\Drupal\tra_alert\Controller\AlertContentController::addPage'
+    _title: 'Add alert'
+  options:
+    _admin_route: TRUE
+  requirements:
+    _permission: 'administer alert types'
+
+alert.type_add:
+  path: '/admin/structure/alert_type/add'
+  defaults:
+    _entity_form: 'alert_type.add'
+    _title: 'Add alert type'
+  requirements:
+    _permission: 'administer alert types'
+
+alert.add:
+  path: '/alert/add/{alert_type}'
+  defaults:
+    _entity_form: 'alert.default'
+    _title_callback: '\Drupal\tra_alert\Controller\AlertContentController::addPageTitle'
+  requirements:
+    _permission: 'administer alert types'
+  options:
+    _admin_route: TRUE
+    parameters:
+      alert_type:
+        type: entity:alert_type
+        with_config_overrides: TRUE

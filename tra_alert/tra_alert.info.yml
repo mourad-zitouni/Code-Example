@@ -1,0 +1,8 @@
+name: TRA Alerte
+type: module
+description: Creating alerts on frontpage
+package: Transilien
+core: 8.x
+
+'interface translation project': tra_alert
+'interface translation server pattern': modules/custom/tra_alert/language/%language.po

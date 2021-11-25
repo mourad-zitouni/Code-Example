@@ -1,0 +1,20 @@
+tra_alert_entity_task_list:
+  route_name: entity.alert.collection
+  title: 'Alerts'
+  base_route: system.admin_content
+
+tra_alert_entity_task_view:
+  route_name: entity.alert.canonical
+  base_route: entity.alert.canonical
+  title: 'View'
+
+tra_alert_entity_task_edit:
+  route_name: entity.alert.edit_form
+  base_route: entity.alert.canonical
+  title: 'Edit'
+
+tra_alert_entity_task_delete:
+  route_name:  entity.alert.delete_form
+  base_route:  entity.alert.canonical
+  title: Delete
+  weight: 10

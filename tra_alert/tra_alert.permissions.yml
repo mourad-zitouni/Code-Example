@@ -1,0 +1,6 @@
+administer alert types:
+  title: 'Administer Alert types'
+  restrict access: true
+
+permission_callbacks:
+  - '\Drupal\tra_alert\AlertPermissionsGenerator::alertTypePermissions'

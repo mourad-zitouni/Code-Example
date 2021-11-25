@@ -1,0 +1,24 @@
+{#
+/**
+ * @file alert.html.twig
+ * Default theme implementation to present alert data.
+ *
+ * This template is used when viewing alert pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_alert()
+ *
+ * @ingroup themeable
+ */
+#}
+<div id="alert_{{ alert.bundle.string }}__{{ alert.id.string }}"
+     class="alert alert--{{ alert.bundle.string|clean_class }}"
+     data-resource="{{ alert.id.string }}">
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

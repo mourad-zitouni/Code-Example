@@ -1,0 +1,11 @@
+tra_alert_entity_action_add:
+  route_name: entity.alert.add_page
+  title: 'Add Alert'
+  appears_on:
+    - entity.alert.collection
+
+tra_alert_entity_type_action_add:
+  route_name: entity.alert_type.add_form
+  title: 'Add Alert type'
+  appears_on:
+    - entity.alert_type.collection

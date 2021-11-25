@@ -1,0 +1,87 @@
+<?php
+
+use Drupal\Component\Render\FormattableMarkup;
+use Drupal\Core\Link;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_cron().
+ */
+function tra_alert_cron() {
+  $alert_manager = \Drupal::service('alert.manager');
+  $alert_manager->publish();
+  $alert_manager->unpublish();
+}
+
+/**
+ * Implements hook_theme().
+ */
+function tra_alert_theme() {
+  return [
+    'alert' => [
+      'render element' => 'elements',
+      'file' => 'alert.page.inc'
+    ],
+    'alert_add_list' => [
+      'variables' => ['content' => NULL],
+    ],
+    'block_alerts' => [
+      'variables' => ['items' => []],
+    ],
+  ];
+}
+
+/**
+ * Prepares variables for list of available node type templates.
+ *
+ * Default template: node-add-list.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - content: An array of content types.
+ *
+ * @see \Drupal\node\Controller\NodeController::addPage()
+ */
+function template_preprocess_alert_add_list(&$variables) {
+  $variables['types'] = [];
+  if (!empty($variables['content'])) {
+    foreach ($variables['content'] as $type) {
+      // prepare link
+      $linkText = new FormattableMarkup('<span class="label">@label</span><div class="description">@description</div>', [
+        '@label' => $type->label(),
+        '@description' => $type->getDescription()
+        ]);
+      $variables['types'][$type->id()] = [
+        'type' => $type->id(),
+        'add_link' => Link::fromTextAndUrl($linkText, Url::fromRoute('alert.add', ['alert_type' => $type->id()]))->toString(),
+      ];
+    }
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ */
+function tra_alert_alert_insert(Drupal\Core\Entity\EntityInterface $entity) {
+  \Drupal\Core\Cache\Cache::invalidateTags(['alert:list']);
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_update().
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ */
+function tra_alert_alert_update(Drupal\Core\Entity\EntityInterface $entity) {
+  \Drupal\Core\Cache\Cache::invalidateTags(['alert:list']);
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_delete().
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ */
+function tra_alert_alert_delete(Drupal\Core\Entity\EntityInterface $entity) {
+  \Drupal\Core\Cache\Cache::invalidateTags(['alert:list']);
+}
+
+
+

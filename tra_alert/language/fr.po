@@ -1,0 +1,25 @@
+# FR translation of Transilien management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2020-10-20 14:25+0200\n"
+"PO-Revision-Date: 2020-10-20 14:25+0200\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "The publish on date must be in the future."
+msgstr "La date de publication doit être dans le futur."
+
+msgid "The unpublish on date must be later than the publish on date."
+msgstr "La date de dépublication doit être postérieure à la date de publication."
+
+msgid "Schedule publication"
+msgstr "Planifier la publication"
+
+msgid "<a target=\"_blank\" href=\"@url\">@title</a> available on @date</b> is also published at this date range."
+msgstr "<a target=\"_blank\" href=\"@url\"> @title </a> disponible le @date </b> est également publié à cette période."

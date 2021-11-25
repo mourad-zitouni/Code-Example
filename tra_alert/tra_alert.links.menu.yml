@@ -1,0 +1,24 @@
+tra_alert_entity_collection_menu:
+  title: 'Alertes'
+  route_name: entity.alert.collection
+  description: 'List of Alert entities'
+  parent: system.admin_content
+
+tra_alert_type_entity_collection_menu:
+  title: 'Alert Entity Types'
+  route_name: entity.alert_type.collection
+  description: 'List of Alert entity types (bundles)'
+  parent: system.admin_structure
+
+tra_alert.alerts:
+  title: 'Alertes'
+  route_name: entity.alert.collection
+  description: 'List of Alert entities'
+  parent: system.admin
+  class: Drupal\tra_alert\Plugin\Menu\AlertsMenuLink
+
+tra_alert.media:
+  title: 'Media'
+  route_name: entity.media.collection
+  description: 'List of Media entities'
+  parent: system.admin

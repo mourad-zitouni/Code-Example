@@ -1,0 +1,25 @@
+{% if items|length > 0 %}
+<div class="container">
+  {% set trackings = attributes.offsetGet('tracking_context').iterator %}
+  <section id="block-alerts" class="block-alerts" style="display: none">
+    {% for index, item in items %}
+      {% if loop.index == 3 %}
+        <div id="panel_splitter" class="block-alerts__splitter"></div>
+      {% endif %}
+      {% set tracking = trackings[index] %}
+      <div class="block-alerts__header {{ loop.index > 2 ? 'block-alerts__header--split'}}">
+        <button class="block-alerts__button block-alerts__button--more" data-toggle-label="{{ 'Show less'|t  }}" data-toggle="collapse" data-target="#{{ item.target }}" aria-expanded="false" aria-controls="{{ item.target }}" data-tracking="{{ tracking.open }}">
+          {{ 'Show more'|t }}
+        </button>
+        <span class="block-alerts__title">{{ item.title }}</span>
+        <button class="block-alerts__button block-alerts__button--remove" data-target-remove="{{ item.id }}" data-tracking="{{ tracking.close }}">
+          <span class="sr-only">{{ 'Remove'|t }}</span>
+        </button>
+      </div>
+      <div id="{{ item.target }}" data-parent="#block-alerts" class="block-alerts__panel collapse {{ loop.index > 2 ? 'block-alerts__panel--split'}}" data-alert-type="{{ item.type }}">
+        {{ item.content }}
+      </div>
+    {% endfor %}
+  </section>
+</div>
+{% endif %}

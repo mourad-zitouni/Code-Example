@@ -1,0 +1,21 @@
+tra_alert.alert_type.*:
+  type: config_entity
+  label: 'Alert Type settings'
+  mapping:
+    uuid:
+      type: string
+    id:
+      type: string
+      label: 'Machine-readable name'
+    label:
+      type: label
+      label: 'Label'
+    description:
+      type: text
+      label: 'Description'
+    defaultMessage:
+      type: sequence
+      label: 'Default Message'
+    weight:
+      type: integer
+      label: 'Weight'

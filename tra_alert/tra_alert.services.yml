@@ -1,0 +1,9 @@
+services:
+  alert.manager:
+    class: Drupal\tra_alert\AlertManager
+    arguments: ['@entity_type.manager' ]
+
+  entity.handler:
+    class: Drupal\tra_alert\EventSubscriber\EntityEventSubscriber
+    tags:
+      - { name: event_subscriber }
