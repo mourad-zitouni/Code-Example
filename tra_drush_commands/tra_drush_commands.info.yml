@@ -1,0 +1,5 @@
+name: Tra drush custom commands
+description: Transilien drush custom commands.
+core: 8.x
+type: module
+package: Transilien

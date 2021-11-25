@@ -1,0 +1,6 @@
+services:
+  tra_drush_commands.commands:
+    class: \Drupal\tra_drush_commands\Commands\TraCustomCommands
+    arguments: ['@database', '@password', '@settings', '@entity_type.manager']
+    tags:
+      - { name: drush.command }
