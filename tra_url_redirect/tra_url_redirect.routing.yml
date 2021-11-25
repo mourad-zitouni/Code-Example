@@ -1,0 +1,18 @@
+tra_url_redirect.config_page:
+  path: '/admin/structure/transilien/redirect/settings'
+  defaults:
+    _controller: '\Drupal\tra_url_redirect\Controller\RedirectionController::configurationPage'
+    _title: 'Transilien Redirect settings'
+  requirements:
+    _permission: 'administer redirection entities'
+
+tra_url_redirect.api:
+  path: '/api/redirect/{id}'
+  defaults:
+    _controller: '\Drupal\tra_url_redirect\Controller\RedirectionApiController::list'
+    _title: 'Transilien Redirect list'
+    _format: json
+    id: null
+    _disable_route_normalizer: 'TRUE'
+  requirements:
+    _permission: 'view published redirection entities'

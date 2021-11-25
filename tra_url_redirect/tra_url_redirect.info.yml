@@ -1,0 +1,9 @@
+name: 'tra_url_redirect'
+type: module
+description: 'TRA url redirection'
+core: 8.x
+package: 'Transilien'
+dependencies:
+  - link
+'interface translation project': tra_url_redirect
+'interface translation server pattern': modules/custom/tra_url_redirect/language/%language.po

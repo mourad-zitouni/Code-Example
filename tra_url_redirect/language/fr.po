@@ -1,0 +1,46 @@
+# Français translation of Transilien
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2020-03-13 14:25+0200\n"
+"PO-Revision-Date: 2020-03-13 14:25+0200\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Add Redirection"
+msgstr "Ajouter une Redirection"
+
+msgid "Redirection type : (1 = external, 0 = internal)."
+msgstr "Type de Redirection : (1 = externe, 0 = interne)."
+
+msgid "Created the %id Redirection."
+msgstr "La redirection %id a été créée."
+
+msgid "Saved the %id Redirection."
+msgstr "La redirection %id a été mis à jour."
+
+msgid "The destination url is the same as the source."
+msgstr "L'URL de destination est identique à la source."
+
+msgid "The source url already exists."
+msgstr "L'URL source existe déjà."
+
+msgid "Be careful, this will make an infinite redirection."
+msgstr "Attention, cela fera une redirection infinie."
+
+msgid "The destination url is not valid."
+msgstr "L'URL de destination n'est pas valide."
+
+msgid "This URL is not valid, please use autocomplete."
+msgstr "Cette URL n'est pas valide, veuillez utiliser la saisie semi-automatique."
+
+msgid "Use autocomplete to choose an editorial content."
+msgstr "Utilisez la saisie semi-automatique pour choisir un contenu éditorial."
+
+msgid "Use autocomplete to choose an editorial content or http://www.example.com for an external url."
+msgstr "Utilisez la saisie semi-automatique pour choisir un contenu éditorial ou http://www.example.com pour une URL externe."

@@ -1,0 +1,5 @@
+entity.redirection.add_form:
+  route_name: entity.redirection.add_form
+  title: 'Add Redirection'
+  appears_on:
+    - entity.redirection.collection

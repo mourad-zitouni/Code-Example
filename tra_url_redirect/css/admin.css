@@ -1,0 +1,51 @@
+.redirects-list {
+    width: 100%;
+}
+
+.redirects-list .even {
+    background-color: #f6f9fb;
+}
+
+.redirects-list .redirects {
+    width: 80%;
+}
+
+.redirects-list .redirects-head {
+    display: table;
+    width: 100%;
+}
+
+.redirects-list .redirects-head div {
+    display: table-cell;
+    width: 50%;
+}
+
+.redirects-list .id {
+    text-align: center;
+}
+
+.redirects-list td {
+    padding: 5px;
+}
+
+.redirects-list .redirects-data tr {
+    background: transparent;
+    border-bottom: 1px dashed #e6e4df;
+    padding: 0;
+}
+
+.redirects-list .redirects-data tr:last-child {
+    border-bottom: none;
+}
+
+.redirects-data {
+    padding: 0;
+    margin: 0;
+    font-family: monospace, monospace;
+}
+
+.redirects-data .redirect-destination {
+    padding-left: 5px;
+    border-left: 2px dashed #e6e4df;
+    width: 50%;
+}

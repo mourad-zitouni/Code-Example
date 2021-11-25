@@ -1,0 +1,19 @@
+add redirection entities:
+  title: 'Create new Redirection entities'
+
+administer redirection entities:
+  title: 'Administer Redirection entities'
+  description: 'Allow to access the administration form to configure Redirection entities.'
+  restrict access: true
+
+delete redirection entities:
+  title: 'Delete Redirection entities'
+
+edit redirection entities:
+  title: 'Edit Redirection entities'
+
+view published redirection entities:
+  title: 'View published Redirection entities'
+
+view unpublished redirection entities:
+  title: 'View unpublished Redirection entities'

@@ -1,0 +1,23 @@
+# Redirection entity task items
+entity.redirection.collection:
+  title: 'Redirections'
+  route_name: entity.redirection.collection
+  base_route: system.admin_content
+  weight: 100
+
+entity.redirection.canonical:
+  route_name: entity.redirection.canonical
+  base_route: entity.redirection.canonical
+  title: 'View'
+
+entity.redirection.edit_form:
+  route_name: entity.redirection.edit_form
+  base_route: entity.redirection.canonical
+  title: 'Edit'
+
+entity.redirection.delete_form:
+  route_name:  entity.redirection.delete_form
+  base_route:  entity.redirection.canonical
+  title: Delete
+  weight: 10
+

@@ -1,0 +1,7 @@
+# Redirection menu items definition
+entity.redirection.collection:
+  title: 'Redirections'
+  route_name: entity.redirection.collection
+  description: 'List Redirection'
+  parent: system.admin_content
+  weight: 100
