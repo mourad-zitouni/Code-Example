@@ -1,9 +1,0 @@
-name: Mgen Markdown formatter
-description: Markdown formatter for MGEN Portal.
-package: MGEN
-core_version_requirement: ^8 || ^9
-
-type: module
-
-# Information added by Drupal.org packaging script on 2021-12-08
-version: '1.0'
