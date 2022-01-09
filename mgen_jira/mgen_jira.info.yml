@@ -1,0 +1,13 @@
+name: Mgen Jira rest
+description: Jira integration for MGEN Portal.
+package: MGEN
+core_version_requirement: ^8 || ^9
+type: module
+dependencies:
+  - drupal:jira_rest
+  - drupal:hook_event_dispatcher
+  - drupal:core_event_dispatcher
+
+
+# Information added by Drupal.org packaging script on 2021-12-22
+version: '1.0'

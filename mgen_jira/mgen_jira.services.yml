@@ -1,0 +1,6 @@
+services:
+   mgen_jira.entity.user:
+    class: Drupal\mgen_jira\EventSubscriber\JiraEntitySubscriber
+    arguments: ['@jira_rest_wrapper_service']
+    tags:
+      - { name: event_subscriber }

@@ -1,0 +1,15 @@
+mgen_jira.issue.add:
+  path: '/admin/mgen/jira/issue/add'
+  defaults:
+    _controller: '\Drupal\mgen_jira\Controller\JiraRestController::add'
+    _title: 'Test new apigee env'
+  requirements:
+    _permission: 'administer site configuration'
+
+mgen_jira.issue.view:
+  path: '/admin/mgen/jira/issue/view'
+  defaults:
+    _controller: '\Drupal\mgen_jira\Controller\JiraRestController::getIssue'
+    _title: 'View jira issue'
+  requirements:
+    _permission: 'administer site configuration'
